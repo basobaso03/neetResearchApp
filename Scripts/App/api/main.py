@@ -115,16 +115,11 @@ app.add_middleware(
         "http://localhost:3000", 
         "http://127.0.0.1:5173",
         "https://neet-research-app.vercel.app",
+        "https://neet-research-app-git-main-marlvinbasera-6663s-projects.vercel.app",
+        "https://neet-research-jqxtf7pkd-marlvinbasera-6663s-projects.vercel.app",
         "https://agentops-command-center.vercel.app"
     ],
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
-
-# Include routers
-app.include_router(research_router)
-app.include_router(sessions_router)
+    allow_origin_regex=r"https://.*\.vercel\.app",
 app.include_router(export_router)
 
 
