@@ -3,7 +3,7 @@
 > A full-stack AI research platform that orchestrates multi-agent workflows to generate structured, source-backed reports with real-time progress tracking.
 
 ![Project Preview](./docs/overview.png)
-🔗 **Live Demo**: [agentops-command-center.vercel.app](https://neet-research-app.vercel.app/) &nbsp;|&nbsp; ⭐ Star this repo if it helped you
+🔗 **Live Demo**: [NeetResearch App](https://neet-research-app.vercel.app/) &nbsp;|&nbsp; ⭐ Star this repo if it helped you
 
 ---
 
