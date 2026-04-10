@@ -107,7 +107,7 @@ These are sample PDF paths generated locally by the system when testing:
 ### 1. Clone and Setup
 
 ```bash
-git clone https://github.com/yourusername/neetresearch-app.git
+git clone https://github.com/basobaso03/neetresearch-app.git
 cd neetresearch-app
 ```
 
