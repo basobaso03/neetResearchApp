@@ -2,7 +2,7 @@
 
 > A full-stack AI research platform that orchestrates multi-agent workflows to generate structured, source-backed reports with real-time progress tracking.
 
-![Project Preview](./docs/architecture.png)
+![Project Preview](./docs/overview.png)
 🔗 **Live Demo**: [agentops-command-center.vercel.app](https://agentops-command-center.vercel.app/) &nbsp;|&nbsp; ⭐ Star this repo if it helped you
 
 ---
