@@ -61,8 +61,9 @@ async def initialize_backend():
 
         # Pre-initialize database tools
         def _init_db():
-            from Scripts.App.database.database import RetrievalTool
-            return RetrievalTool(db_path="./database/db")
+            # from Scripts.App.database.database import RetrievalTool
+            # return RetrievalTool(db_path="./database/db")
+            pass # Skipped locally to prevent Render OOM
             
         _ = await asyncio.to_thread(_init_db)
         await asyncio.sleep(0.1)
