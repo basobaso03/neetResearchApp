@@ -58,12 +58,15 @@ async def initialize_backend():
         
         init_state["progress"] = 50
         init_state["message"] = "Initializing database tools..."
-        
+
         # Pre-initialize database tools
-        from Scripts.App.database.database import RetrievalTool
-        _ = RetrievalTool(db_path="./database/db")
+        def _init_db():
+            from Scripts.App.database.database import RetrievalTool
+            return RetrievalTool(db_path="./database/db")
+            
+        _ = await asyncio.to_thread(_init_db)
         await asyncio.sleep(0.1)
-        
+
         init_state["progress"] = 80
         init_state["message"] = "Building research graph..."
         
