@@ -1,0 +1,65 @@
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+venv/
+
+# Node
+node_modules/
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+
+# Env and secrets
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+backend_install.log
+
+# Local databases / generated state
+database/db/
+Scripts/App/database/db/
+Scripts/App/database/data/
+Scripts/App/output/
+*.sqlite3
+
+# Temporary scripts and generated artifacts
+/temp_*
+/temp_*.py
+/temp_*.txt
+/temp_*.json
+/smoke_*.json
+/session_*_status.json
+/sessions_snapshot.json
+/report_*.json
+/system_web_run_result.json
+/web_tool_*_output.txt
+/simple_*_output*.txt
+/simple_*.json
+/simple_*.md
+/run*_status*.json
+/single_supervisor_status.json
+/supervisor_cache_verification_*output*.txt
+
+# Tests and ad-hoc test scripts
+*_test.py
+test_*.py
+
+# Build caches
+.cache/

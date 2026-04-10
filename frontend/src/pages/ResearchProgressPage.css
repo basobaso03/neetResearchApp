@@ -1,0 +1,125 @@
+.progress-page {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.progress-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-lg);
+}
+
+.progress-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xl);
+}
+
+.progress-main {
+    padding: var(--space-xl);
+}
+
+.progress-title-section {
+    text-align: center;
+    margin-bottom: var(--space-xl);
+}
+
+.progress-title {
+    font-size: var(--text-2xl);
+    margin-bottom: var(--space-sm);
+}
+
+.progress-topic {
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+/* Stats */
+.progress-stats {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-xl);
+    margin-top: var(--space-xl);
+    padding-top: var(--space-lg);
+    border-top: 1px solid var(--border-color);
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat-label {
+    display: block;
+    font-size: var(--text-sm);
+    color: var(--text-muted);
+    margin-bottom: var(--space-xs);
+}
+
+.stat-value {
+    font-size: var(--text-2xl);
+    font-weight: 700;
+    color: var(--primary);
+}
+
+/* Error */
+.error-box {
+    margin-top: var(--space-lg);
+    padding: var(--space-md);
+    background: rgba(245, 101, 101, 0.1);
+    border: 1px solid var(--error);
+    border-radius: var(--radius-md);
+    color: var(--error);
+}
+
+.error-details {
+    margin-top: var(--space-sm);
+}
+
+.error-details summary {
+    cursor: pointer;
+    color: var(--text-muted);
+    font-size: var(--text-sm);
+}
+
+.error-details pre {
+    margin-top: var(--space-xs);
+    max-height: 180px;
+    overflow: auto;
+    white-space: pre-wrap;
+    word-break: break-word;
+    background: rgba(0, 0, 0, 0.06);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    padding: var(--space-sm);
+    color: var(--text-secondary);
+    font-size: 12px;
+}
+
+/* View Report Button */
+.view-report-btn {
+    display: flex;
+    justify-content: center;
+    margin-top: var(--space-xl);
+}
+
+/* Notes Section */
+.notes-section {
+    padding: var(--space-lg);
+}
+
+.notes-title {
+    font-size: var(--text-lg);
+    margin-bottom: var(--space-md);
+}
+
+/* Loading State */
+.loading-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-lg);
+    padding: var(--space-2xl);
+    color: var(--text-secondary);
+}

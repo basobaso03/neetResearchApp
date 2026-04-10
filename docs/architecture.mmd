@@ -1,0 +1,80 @@
+flowchart TD
+    U[User Browser]
+
+    subgraph FE[Frontend - React + TypeScript]
+        UI[Pages and Components]
+        ST[Zustand Store]
+        APIClient[API Service Layer]
+        WSClient[WebSocket Hooks]
+    end
+
+    subgraph BE[Backend - FastAPI]
+        Main[api/main.py]
+        Routes[Research and Sessions Routes]
+        WS[WebSocket Manager]
+        Export[Export Routes and Modules]
+    end
+
+    subgraph ORCH[Agent Orchestration Layer]
+        Graph[LangGraph App Graph]
+        Scope[Scoping and Clarification Agents]
+        Sup[Supervisor Agent]
+        Worker[Research Worker Agent]
+        Report[Final Report Generation]
+    end
+
+    subgraph TOOLS[Research Tools]
+        WebADK[ADK Web Research Tool]
+        WebCrawler[Crawler Web Search Tool]
+        DBTool[Database Retrieval Tool]
+    end
+
+    subgraph DATA[Data and Persistence]
+        Chroma[(ChromaDB)]
+        Cache[(Search and Final Report Cache)]
+        SessionMem[(In-Memory Session State)]
+        PDF[PDF and Markdown Outputs]
+    end
+
+    U --> UI
+    UI --> ST
+    ST --> APIClient
+    ST --> WSClient
+
+    APIClient -->|HTTP /api| Main
+    WSClient -->|WS /ws/init and /ws/research| WS
+
+    Main --> Routes
+    Routes --> SessionMem
+    Routes --> Graph
+    Routes --> Export
+
+    Graph --> Scope
+    Graph --> Sup
+    Graph --> Worker
+    Worker --> WebADK
+    Worker --> WebCrawler
+    Worker --> DBTool
+    Graph --> Report
+
+    DBTool --> Chroma
+    Routes --> Cache
+    Report --> Cache
+    Export --> PDF
+
+    WS --> ST
+    SessionMem --> Routes
+    Cache --> Routes
+    Routes --> APIClient
+
+    classDef front fill:#dbeafe,stroke:#1d4ed8,color:#1e3a8a
+    classDef back fill:#dcfce7,stroke:#15803d,color:#14532d
+    classDef orch fill:#fef3c7,stroke:#b45309,color:#78350f
+    classDef tools fill:#f3e8ff,stroke:#7e22ce,color:#4c1d95
+    classDef data fill:#ffe4e6,stroke:#be123c,color:#881337
+
+    class UI,ST,APIClient,WSClient front
+    class Main,Routes,WS,Export back
+    class Graph,Scope,Sup,Worker,Report orch
+    class WebADK,WebCrawler,DBTool tools
+    class Chroma,Cache,SessionMem,PDF data

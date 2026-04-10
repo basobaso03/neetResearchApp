@@ -1,0 +1,207 @@
+.report-page {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.report-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-lg);
+}
+
+.report-actions {
+    display: flex;
+    gap: var(--space-sm);
+}
+
+/* Export Dropdown */
+.export-dropdown {
+    position: relative;
+}
+
+.export-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: var(--space-xs);
+    min-width: 180px;
+    padding: var(--space-sm);
+    z-index: 10;
+}
+
+.export-option {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    width: 100%;
+    padding: var(--space-sm) var(--space-md);
+    background: transparent;
+    border: none;
+    color: var(--text-primary);
+    cursor: pointer;
+    border-radius: var(--radius-md);
+    transition: background var(--transition);
+}
+
+.export-option:hover {
+    background: var(--bg-card-hover);
+}
+
+/* Report Content */
+.report-content {
+    padding: var(--space-xl);
+}
+
+.report-meta {
+    margin-bottom: var(--space-xl);
+    padding-bottom: var(--space-lg);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.report-title {
+    font-size: var(--text-3xl);
+    margin-bottom: var(--space-md);
+}
+
+.report-info {
+    display: flex;
+    gap: var(--space-lg);
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    color: var(--text-muted);
+    font-size: var(--text-sm);
+}
+
+/* Markdown Content */
+.markdown-content {
+    line-height: 1.8;
+}
+
+.markdown-content h1,
+.markdown-content h2,
+.markdown-content h3,
+.markdown-content h4 {
+    margin-top: var(--space-xl);
+    margin-bottom: var(--space-md);
+}
+
+.markdown-content h1 {
+    font-size: var(--text-3xl);
+}
+
+.markdown-content h2 {
+    font-size: var(--text-2xl);
+}
+
+.markdown-content h3 {
+    font-size: var(--text-xl);
+}
+
+.markdown-content p {
+    margin-bottom: var(--space-md);
+    color: var(--text-secondary);
+}
+
+.markdown-content ul,
+.markdown-content ol {
+    margin-bottom: var(--space-md);
+    padding-left: var(--space-xl);
+    color: var(--text-secondary);
+}
+
+.markdown-content li {
+    margin-bottom: var(--space-sm);
+}
+
+.markdown-content blockquote {
+    border-left: 4px solid var(--primary);
+    padding-left: var(--space-lg);
+    margin: var(--space-lg) 0;
+    color: var(--text-muted);
+    font-style: italic;
+}
+
+.markdown-content code {
+    background: var(--bg-secondary);
+    padding: 2px 6px;
+    border-radius: var(--radius-sm);
+    font-family: monospace;
+    font-size: 0.9em;
+}
+
+.markdown-content pre {
+    background: var(--bg-secondary);
+    padding: var(--space-md);
+    border-radius: var(--radius-md);
+    overflow-x: auto;
+    margin: var(--space-md) 0;
+}
+
+.markdown-content pre code {
+    background: transparent;
+    padding: 0;
+}
+
+.markdown-content a {
+    color: var(--primary);
+}
+
+.markdown-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: var(--space-md) 0;
+}
+
+.markdown-content th,
+.markdown-content td {
+    padding: var(--space-sm) var(--space-md);
+    border: 1px solid var(--border-color);
+    text-align: left;
+}
+
+.markdown-content th {
+    background: var(--bg-secondary);
+}
+
+/* Loading/Error States */
+.loading-state,
+.error-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-lg);
+    padding: var(--space-2xl);
+    text-align: center;
+}
+
+.error-details {
+    margin-top: var(--space-sm);
+    width: 100%;
+    text-align: left;
+}
+
+.error-details summary {
+    cursor: pointer;
+    color: var(--text-muted);
+    font-size: var(--text-sm);
+}
+
+.error-details pre {
+    margin-top: var(--space-xs);
+    max-height: 220px;
+    overflow: auto;
+    white-space: pre-wrap;
+    word-break: break-word;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    padding: var(--space-sm);
+    color: var(--text-secondary);
+    font-size: 12px;
+}

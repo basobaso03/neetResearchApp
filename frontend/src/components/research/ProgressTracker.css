@@ -1,0 +1,136 @@
+.progress-tracker {
+    padding: var(--space-lg) 0;
+}
+
+/* Overall Progress */
+.overall-progress {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    margin-bottom: var(--space-xl);
+}
+
+.overall-progress .progress-bar {
+    flex: 1;
+    height: 12px;
+}
+
+.progress-percent {
+    font-size: var(--text-lg);
+    font-weight: 700;
+    color: var(--primary);
+    min-width: 50px;
+    text-align: right;
+}
+
+/* Phase Steps */
+.phase-steps {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.phase-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    flex: 1;
+}
+
+/* Connector Line */
+.phase-connector {
+    position: absolute;
+    top: 20px;
+    right: 50%;
+    width: 100%;
+    height: 2px;
+    background: var(--border-color);
+    z-index: 0;
+}
+
+.phase-connector.filled {
+    background: var(--primary);
+}
+
+/* Icon */
+.phase-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--bg-secondary);
+    border: 2px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+    z-index: 1;
+    transition: all var(--transition);
+}
+
+.phase-step.completed .phase-icon {
+    background: var(--success);
+    border-color: var(--success);
+    color: white;
+}
+
+.phase-step.active .phase-icon {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: white;
+    box-shadow: 0 0 12px rgba(102, 126, 234, 0.5);
+}
+
+.phase-step.error .phase-icon {
+    background: var(--error);
+    border-color: var(--error);
+    color: white;
+}
+
+/* Spinning animation for active */
+.spinning {
+    animation: spin 1s linear infinite;
+}
+
+/* Info */
+.phase-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: var(--space-sm);
+    text-align: center;
+}
+
+.phase-emoji {
+    font-size: var(--text-lg);
+}
+
+.phase-label {
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+    margin-top: var(--space-xs);
+}
+
+.phase-step.active .phase-label,
+.phase-step.completed .phase-label {
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.phase-progress {
+    font-size: var(--text-xs);
+    color: var(--primary);
+    font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .phase-label {
+        display: none;
+    }
+
+    .phase-icon {
+        width: 32px;
+        height: 32px;
+    }
+}

@@ -1,0 +1,39 @@
+.live-notes {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.live-notes.empty {
+    text-align: center;
+    padding: var(--space-lg);
+}
+
+.empty-text {
+    color: var(--text-muted);
+    font-style: italic;
+}
+
+.notes-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.note-item {
+    display: flex;
+    gap: var(--space-sm);
+    padding: var(--space-sm);
+    background: var(--bg-secondary);
+    border-radius: var(--radius-md);
+}
+
+.note-bullet {
+    color: var(--primary);
+    font-weight: bold;
+}
+
+.note-text {
+    color: var(--text-secondary);
+    font-size: var(--text-sm);
+}
